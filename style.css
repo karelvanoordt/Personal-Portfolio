@@ -1,86 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-
 html {
-    background: white;
-    display: block;
-    background-size: auto;
-
+  background: white;
+  display: block;
+  background-size: auto;
 }
 
 body {
-    background-image: url(images/header/background/header-background.png);
-    background-size: 100%;
-    background-repeat: no-repeat;    
-    
-    width: fit-content;
-    display: flex;
+  background-image: url(images/header/background/header-background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: fit-content;
+  display: flex;
 }
 
 .toolbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .Logo {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    line-height: 20px;
-    color: #6070FF;
-    text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 20px;
+  color: #6070ff;
+  text-align: left;
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 20px;
-    
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
 }
 
 .portfolio-header {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 52px;
-    justify-self:center;
-    font-style: normal;
-    color: #172B4D;
-
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  justify-self: center;
+  font-style: normal;
+  color: #172b4d;
 }
 
 .content {
-    display: flex;
-
-    justify-content: space space-around;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #344563;
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #344563;
 }
 
 .contact-title {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: #7F8CFF;
-    font-size: 16px;
-    line-height: 24px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #7f8cff;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .favincons-container {
-    justify-content: space-around;
-    /* flex-grow: 4; */
-    padding: 5px;
-    margin: 50px;
+  justify-content: space-around;
+  padding: 5px;
+  margin: 50px;
 }
 
 .favicon {
-    padding:10px;
-    
+  padding: 10px;
 }
