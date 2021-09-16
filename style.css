@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-image: url(images/header/background/header-background.png);
+  background-image: url(images/header/background/header-shapes\ mobile.png);
   background-size: 100%;
   background-repeat: no-repeat;
   width: fit-content;
@@ -46,6 +46,12 @@ body {
   justify-self: center;
   font-style: normal;
   color: #172b4d;
+  margin: 30px;
+}
+
+.content-container {
+  display: flex;
+  margin: 30px;
 }
 
 .content {
@@ -64,12 +70,12 @@ body {
   color: #7f8cff;
   font-size: 16px;
   line-height: 24px;
+  margin: 30px;
 }
 
-.favincons-container {
+.favicons-container {
   justify-content: space-around;
-  padding: 5px;
-  margin: 50px;
+  margin: 30px;
 }
 
 .favicon {

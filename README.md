@@ -20,8 +20,6 @@ As a part of Microvers's Module 1, I've built the first part of my personal port
 
 ## Getting Started
 
-
-
 To get a local copy up and running follow these simple example steps.
 
 Download the files or clone them and use them in your local environment. Also you can fork the repository and continue where you want to.
@@ -31,13 +29,6 @@ Download the files or clone them and use them in your local environment. Also yo
 ### Prerequisites
 
 - Have a web browser installed
-
-
-### Setup
-
-
-
-
 
 ## Authors
 
