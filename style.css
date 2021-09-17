@@ -7,11 +7,20 @@ html {
 }
 
 body {
-  background-image: url(images/header/background/header-shapes\ mobile.png);
   background-size: 100%;
   background-repeat: no-repeat;
   width: fit-content;
   display: flex;
+  background-color: #E5E5E5
+}
+
+.main-header {
+  background-image: url(images/header/background/header-shapes\ mobile.png);
+  background-repeat: no-repeat;
+  width: fit-content;
+  display: flexbox;
+  background-color: white;
+
 }
 
 .toolbar-container {
@@ -82,3 +91,4 @@ body {
 .favicon {
   padding: 10px;
 }
+
