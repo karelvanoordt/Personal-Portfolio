@@ -15,7 +15,7 @@ As a part of Microvers's Module 1, I've built the second part of my personal por
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://karelvanoordt.github.io/Portfolio-mobile-version/)
 
 
 ## Getting Started

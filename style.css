@@ -294,31 +294,29 @@ h6 {
   display: flex;
 }
 
-ul{
-list-style-type: none;
+ul {
+  list-style-type: none;
 }
 
-.web-lang > *{ 
-  display:flex;
+.web-lang > * {
+  display: flex;
   vertical-align: middle;
   align-items: center;
 }
 
-
-
 .web-lang {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   width: 70%;
-  background-color: #F7F7F9;
+  background-color: #f7f7f9;
   margin: 8px;
 }
 
 .lang-img {
-  display:flex;
-  vertical-align: middle;
   display: flex;
-  align-items: center;}
+  vertical-align: middle;
+  align-items: center;
+}
 
 .frameworks-skills {
   align-items: center;
@@ -326,7 +324,7 @@ list-style-type: none;
   justify-content: center;
 }
 
-.frameworks  {
+.frameworks {
   width: 50%;
   margin: 8px;
   font-family: 'Poppins';
@@ -335,7 +333,7 @@ list-style-type: none;
   font-size: 20px;
   line-height: 20px;
   display: flex;
-  }
+}
 
 .skills {
   width: 50%;
