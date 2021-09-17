@@ -10,7 +10,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   width: fit-content;
-  display: flex;
+  
   background-color: #E5E5E5
 }
 
@@ -98,16 +98,40 @@ body {
 
 .work-card {
 
-    background-color: #FFFFFF;
-    border: 1px solid #DFE1E6;
-    box-sizing: border-box;
-    border-radius: 16px;
-    position: static;
     display: flexbox;
     flex-direction: column;
     align-items: center;
     padding: 16px;
+    position: static;
+    width: 100%;
+    
+    background: #FFFFFF;
+    border: 1px solid #DFE1E6;
+    box-sizing: border-box;
+    border-radius: 16px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 20px 5px;
+    display: flexbox;
 
+}
+
+
+
+/* .work-img {
+    width: auto;
+    height: 220px;
+    margin: 12px;
+    border-radius: 8px;
+    background-color: gray;
+} */
+
+.work-1-img {
+    width: 100%;
+    /* height; */
+    display: flexbox;
+    margin: 12px;
 }
 
 .work-title {
@@ -122,12 +146,16 @@ body {
     font-size: 32px;
     line-height: 44px;
     color: #172B4D;
-    margin: 12px 0px;
+    margin: 12px;
+    margin-top: 10px;
 }
 
 .details-container {
-    display: grid;
-    grid-column: auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 80%;
+    margin: 12px ;
 }
 
 h5{
@@ -154,7 +182,6 @@ h6 {
     position: static;
     width: 88px;
     height: 16px;
-    left: 0px;
     top: 8px;
 
 }
@@ -170,6 +197,7 @@ h6 {
     order: 1;
     flex-grow: 0;
     margin: 12px 0px;
+    justify-content: left;
 }
 
 
@@ -181,13 +209,12 @@ h6 {
     line-height: 16px;
     letter-spacing: 0.03em;
     color: #6070FF;
-    position: static;
-    width:fit-content;
+    /* position: static; */
     height: 16px;
     top: 4px;
     order: 0;
     flex-grow: 0;
-    margin: 0px 0px;
+    margin: 12px;
     display: flexbox;
     border-radius: 8px;
     background-color: #EBEBFF;
