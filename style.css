@@ -314,8 +314,9 @@ ul {
   display: flex;
   width: 80%;
   background-color: #f7f7f9;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   justify-content: space-between;
+  padding: 12px;
 }
 
 .lang-img {
@@ -326,7 +327,7 @@ ul {
 
 .frameworks-skills {
   align-items: center;
-  width: auto;
+  width: 100%;
   justify-content: center;
 }
 
@@ -344,12 +345,6 @@ button:hover {
   background-color: #6070ff;
 }
 
-#hr {
-  position: absolute;
-  height: 1px;
-  width: 50%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #dfe1e6;
+.separator {
+  width: 85%;
 }
