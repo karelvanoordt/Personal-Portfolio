@@ -40,6 +40,10 @@ body {
   text-align: left;
 }
 
+.toolbar-logo {
+  text-decoration: none;
+}
+
 .header-container {
   display: flex;
   justify-content: space-around;
@@ -322,4 +326,13 @@ ul {
   align-items: center;
   width: auto;
   justify-content: center;
+}
+
+a:hover {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  color: #fff;
+  background-color: #6070ff;
 }
