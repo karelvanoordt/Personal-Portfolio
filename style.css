@@ -137,19 +137,12 @@ body {
   margin-top: 10px;
 }
 
-.details-container > h6 {
-  display: flex;
-  flex-direction: row;
-  vertical-align: top;
-}
-
 .details-container {
   display: flex;
   align-items: baseline;
   justify-content: space-around;
   width: 70%;
   margin-right: 40px;
-  /* margin-left: 40px; */
 }
 
 h5 {
@@ -166,7 +159,7 @@ h5 {
   top: 8px;
 }
 
-h6 {
+.details-container > h6 {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -176,7 +169,6 @@ h6 {
   width: auto;
   height: 16px;
   top: 8px;
-  
 }
 
 .description {
@@ -192,7 +184,6 @@ h6 {
   margin: 12px 0;
   justify-content: left;
 }
-
 
 .lang {
   font-family: 'Poppins', sans-serif;
@@ -285,6 +276,9 @@ h6 {
   line-height: 24px;
   margin-left: 50px;
   vertical-align: middle;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-right: 40px;
 }
 
 .languages-list {
@@ -318,7 +312,7 @@ ul {
 
 .web-lang {
   display: flex;
-  width: 50%;
+  width: 80%;
   background-color: #f7f7f9;
   margin-bottom: 5px;
   justify-content: space-between;
@@ -336,11 +330,26 @@ ul {
   justify-content: center;
 }
 
-a:hover {
+.drop {
+  height: 10px;
+  width: auto;
+}
+
+button:hover {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
   color: #fff;
   background-color: #6070ff;
+}
+
+#hr {
+  position: absolute;
+  height: 1px;
+  width: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #dfe1e6;
 }
