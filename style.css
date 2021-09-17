@@ -300,7 +300,6 @@ h5 {
   font-size: 15px;
   line-height: 20px;
   display: flex;
-  align-items: center;
   margin-right: 80px;
 }
 
@@ -317,14 +316,17 @@ ul {
   width: 80%;
   background-color: #f7f7f9;
   margin-bottom: 15px;
-  justify-content: space-between;
+  justify-content: left;
   padding: 12px;
+  /* margin-left: 50px; */
+
 }
 
 .lang-img {
   display: flex;
   vertical-align: middle;
-  margin-left: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .frameworks-skills {
