@@ -2,9 +2,9 @@
 
 # Portfolio Mobile Page
 
-As a part of Microvers's Module 1, I've built the first part of my personal portfolio, one of the most important tools of a Software Developer.
+As a part of Microvers's Module 1, I've built the second part of my personal portfolio, focused on the work that I've designed in the past.
 
-![screenshot](./Screenshot.png)
+![screenshot](./Screenshot 2.png)
 
 
 ## Built With
