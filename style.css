@@ -90,7 +90,7 @@ body {
 
 .favicons-container {
   justify-content: space-around;
-  margin: 30px;
+  margin: 5px 30px;
   padding-bottom: 10px;
 }
 
@@ -183,15 +183,15 @@ h5 {
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin: 12px 0;
+  margin-left: 12px;
   justify-content: left;
 }
 
 .lang {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 12px;
+  line-height: 16px;
   letter-spacing: 0.03em;
   color: #6070ff;
   top: 4px;
@@ -201,12 +201,17 @@ h5 {
   border-radius: 8px;
   background-color: #ebebff;
   border: none;
+  padding: 4px 12px;
 }
 
 .work-button {
   padding-top: 30px;
   padding-bottom: 25px;
   justify-items: left;
+}
+
+.cont-resume-button > button {
+  margin-left: 35px;
 }
 
 .project-button {
@@ -238,37 +243,6 @@ h5 {
   border-top-right-radius: 100px;
 }
 
-.cont-resume-button {
-  padding-top: 10px;
-  padding-bottom: 25px;
-  justify-items: left;
-  display: flex;
-  margin: 20px;
-}
-
-.resume-button {
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 24px;
-  text-align: center;
-  justify-items: left;
-  letter-spacing: 0.03em;
-  color: #396df2;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0 10px;
-  border: 1px solid #6070ff;
-  box-sizing: border-box;
-  border-radius: 8px;
-  width: fit-content;
-  height: 48px;
-  left: 0;
-  background: none;
-}
-
 .option {
   display: flex;
   font-family: 'Poppins', sans-serif;
@@ -281,6 +255,10 @@ h5 {
   align-items: baseline;
   justify-content: space-between;
   margin-right: 40px;
+}
+
+.languages-title {
+  padding-top: 20px;
 }
 
 .languages-list {
@@ -318,8 +296,7 @@ ul {
   margin-bottom: 15px;
   justify-content: left;
   padding: 12px;
-  /* margin-left: 50px; */
-
+  border-radius: 8px;
 }
 
 .lang-img {
@@ -344,7 +321,6 @@ button:hover {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 17px;
   color: #fff;
   background-color: #6070ff;
 }
