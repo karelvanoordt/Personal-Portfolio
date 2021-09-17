@@ -9,14 +9,14 @@ body {
   background-repeat: no-repeat;
   width: fit-content;
   background-color: #e5e5e5;
+  margin: 0;
 }
 
 .main-header {
   background-image: url(images/header/background/header-shapes\ mobile.png);
   background-repeat: no-repeat;
+  position: block;
   width: fit-content;
-
-  /* display: flexbox; */
   background-color: white;
   border-bottom-left-radius: 100px;
 }
@@ -93,7 +93,7 @@ body {
 
 .works {
   display: grid;
-  margin: 10px;
+  padding: 1rem;
 }
 
 .work-card {
@@ -108,7 +108,7 @@ body {
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin: 20px 10px;
+  margin: 20px 0;
 }
 
 .work-1-img {
@@ -264,15 +264,16 @@ h6 {
   background: none;
 }
 
-.languages {
+.option {
   display: flex;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  margin: 12px;
+  margin-left: 50px;
   vertical-align: middle;
+
 }
 
 .languages-list {
@@ -324,7 +325,7 @@ ul {
   justify-content: center;
 }
 
-.frameworks {
+/* .frameworks {
   width: 50%;
   margin: 8px;
   font-family: 'Poppins', sans-serif;
@@ -344,4 +345,4 @@ ul {
   font-size: 20px;
   line-height: 20px;
   display: flex;
-}
+} */
