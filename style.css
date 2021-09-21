@@ -318,7 +318,7 @@ ul {
   width: auto;
 }
 
-button:hover {
+.project-button:hover {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -331,7 +331,7 @@ button:hover {
 }
 
 .main-form {
-  background-image: url(images/contact/Contact\ me.png);
+  background-image: url(images/contact/contact-back.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -339,15 +339,18 @@ button:hover {
 }
 
 .form-container {
-  background-image: url(images/contact/contact\ form\ shapes-mobile@2x.png);
+  background-image: url(images/contact/contact-shapes.png);
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
   margin: 103px 24px 0 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 103px 24px 0 24px;
+  width: auto;
+  border-bottom-left-radius: 100px;
+  padding-bottom: 20px;
 }
 
 .contact-title {
@@ -433,3 +436,10 @@ button:hover {
   text-align: start;
 }
 
+.submit-button:hover {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #fff;
+  background-color: #6070ff;
+}
