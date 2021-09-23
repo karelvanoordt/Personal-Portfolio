@@ -7,11 +7,11 @@ html {
 body {
   background-size: 100%;
   background-repeat: no-repeat;
-  width: 70%;
+  width: auto;
   background-color: #e5e5e5;
   margin-left: auto;
   margin-right: auto;
-  max-width: 500px;
+  /* max-width: 500px; */
 }
 
 .main-header {
@@ -436,4 +436,98 @@ ul {
   font-weight: 500;
   color: #fff;
   background-color: #6070ff;
+}
+
+/* RESPONSIVE FOR DESKTOP AND LAPTOP */
+@media screen and (max-width:1024px) {
+  .desktop-navbar {
+    display: none;
+  }
+
+  /* .nav-option {
+  display: none;
+  } */
+}
+
+
+
+@media screen and (min-width:1024px) {
+
+  .body {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: auto;
+    background-color: #e5e5e5;
+  }
+
+  .toolbar-button {
+    display: none;
+  }
+
+  .toolbar-container {
+    display: flex;
+  }
+
+  .navbar-options {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500px;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 20px 0 20px;
+  }
+
+  .nav-option {
+    text-decoration: none;
+    color: #344563;
+    padding: 10px;
+  }
+
+  .content {
+    margin: 0 260px 0 260px;
+  }
+
+  .contact-container {
+    margin: 0 260px 0 260px;
+  }
+
+  .favicons-container {
+    margin: 0 260px 0 260px;
+  }
+
+  .works {
+    display: flex;
+    margin: 82px;
+    flex-direction: column;
+    width: 60%;
+    /* align-items: center; */
+  }
+
+  .work-card {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    align-self: center;
+  }
+
+  .work-1-img {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+  }
+
+
+  .contact-paragraph {
+    margin: 0px 435px 80px 435px;
+  }
+
 }
