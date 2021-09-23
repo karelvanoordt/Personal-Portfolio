@@ -64,18 +64,19 @@ body {
   margin: 30px;
 }
 
-.content-container {
+.header-paragraph {
   display: flex;
   margin: 30px;
 }
 
-.content {
+.content-paragraph {
   display: flex;
   justify-content: space-around;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #344563;
+  margin: 0 40px 0 40px;
 }
 
 .contact-title {
@@ -443,10 +444,6 @@ ul {
   .desktop-navbar {
     display: none;
   }
-
-  /* .nav-option {
-  display: none;
-  } */
 }
 
 
@@ -486,7 +483,7 @@ ul {
     padding: 10px;
   }
 
-  .content {
+  .content-paragraph {
     margin: 0 260px 0 260px;
   }
 
@@ -500,15 +497,11 @@ ul {
 
   .works {
     display: flex;
-    /* margin: 20px 200px 20px 250px; */
     flex-direction: column;
     width: 1000px;
     margin-left: 150px;
   }
 
-  .work-info {
-
-  }
 
   .work-card {
     display: grid;
@@ -524,17 +517,87 @@ ul {
   justify-content: center;
   }
 
- 
-
   .about {
     display: grid;
     grid-template-columns: 40% 60%;
 
   }
 
+  .about-header {
+    align-items: left;
+    justify-content: left;
+  }
 
-  .contact-paragraph {
-    margin: auto;
+  .about-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-paragraph {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #344563;
+    margin: 0 40px 0 40px;
+  }
+
+  .contact-container {
+    margin: 0;
+  }
+
+  .favicons-container {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    padding-left: 90px;
+
+  }
+
+  .languages-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  .languages-title {
+    vertical-align: bottom;  
+  }
+
+  .languages-list {
+    display: grid;
+    grid-row: 2;
+    display: flex;
+    margin: 0 10px 0 10px;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 550px;
+    padding: 0px 0px 0px 30px;
+  }
+
+  .web-lang {
+    width: 140px;
+    display: grid;
+  }
+
+  .lang-title {
+    flex-direction: column;
+  }
+
+  .frameworks-skills {
+    grid-row: 3;
+  }
+
+  .lang-img {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .lang-title {
+    flex-direction: column;
   }
 
 }
