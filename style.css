@@ -180,9 +180,9 @@ h5 {
   font-size: 15px;
   line-height: 24px;
   color: #344563;
-  flex: none;
+  /* flex: none;
   order: 1;
-  flex-grow: 0;
+  flex-grow: 0; */
   margin-left: 12px;
   justify-content: left;
 }
@@ -458,6 +458,7 @@ ul {
     background-repeat: no-repeat;
     width: auto;
     background-color: #e5e5e5;
+    align-items: center;
   }
 
   .toolbar-button {
@@ -494,30 +495,28 @@ ul {
   }
 
   .favicons-container {
-    margin: 0 260px 0 260px;
+    margin: 0 260px 0 240px;
   }
 
   .works {
     display: flex;
-    margin: 82px;
+    margin: 20px 250px 20px 250px;
     flex-direction: column;
     width: 60%;
-    /* align-items: center; */
   }
 
   .work-card {
     display: grid;
-    grid-template-columns: 50% 50%;
-    width: 100%;
-    align-self: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1fr);
+    height: 350px;
   }
 
   .work-1-img {
     width: 100%;
-    grid-column-start: 1;
-    grid-column-end: 2;
-  
   }
+
+ 
 
   .about {
     display: grid;
@@ -527,7 +526,7 @@ ul {
 
 
   .contact-paragraph {
-    margin: 0px 435px 80px 435px;
+    margin: auto;
   }
 
 }
