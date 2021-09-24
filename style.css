@@ -33,17 +33,13 @@ body {
   margin: 30px;
 }
 
-.navbar-logo {
+.mobile-logo {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-style: normal;
   line-height: 20px;
   color: #6070ff;
   text-align: left;
-}
-
-.navbar-logo-link {
-  text-decoration: none;
 }
 
 .header-container {
@@ -57,7 +53,7 @@ body {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
-  justify-self: center;
+  justify-self: left;
   font-style: normal;
   color: #172b4d;
   margin: 30px;
@@ -451,16 +447,20 @@ ul {
 
 /* RESPONSIVE FOR DESKTOP AND LAPTOP */
 @media screen and (max-width: 1024px) {
- 
-  .navbar-desktop {
+  .desktop-logo {
     display: none;
   }
 
+  .navbar-options {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1024px) {
- 
-  
+  .mobile-logo {
+    display: none;
+  }
+
   .body {
     background-size: 100%;
     background-repeat: no-repeat;
@@ -473,8 +473,20 @@ ul {
     display: none;
   }
 
-  .toolbar-container {
+  .navbar-desktop {
     display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 0 20px 0 20px;
+  }
+
+  .desktop-logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 20px;
+    color: #6070ff;
+    text-align: left;
   }
 
   .navbar-options {
@@ -482,16 +494,26 @@ ul {
     font-size: 15px;
     line-height: 20px;
     font-weight: 500;
-    align-items: center;
     display: flex;
     justify-content: space-around;
     margin: 0 20px 0 20px;
+    flex-direction: row;
   }
 
   .nav-option {
     text-decoration: none;
     color: #344563;
     padding: 10px;
+  }
+
+  .header-container {
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    font-style: normal;
+    color: #172b4d;
   }
 
   .content-paragraph {
@@ -504,10 +526,8 @@ ul {
 
   .favicons-container {
     margin: 0 260px 0 240px;
-    margin-left: 0;
     display: flex;
-    justify-content: center;
-    padding-left: 90px;
+    justify-content: left;
   }
 
   .works {
@@ -522,8 +542,6 @@ ul {
     flex-direction: row;
     width: 85%;
     column-gap: 15px;
-
-    
   }
 
   .work-card-B {
@@ -538,10 +556,10 @@ ul {
     justify-content: right;
   }
 
-  .work-1-img {
+  /* .work-1-img {
     width: 100%;
     justify-content: center;
-  }
+  } */
 
   .about {
     display: grid;
@@ -551,11 +569,6 @@ ul {
   .about-info {
     display: flex;
     flex-direction: column;
-  }
-
-  .header-container {
-    justify-content: left;
-    margin: 20px 0 10px 10px;
   }
 
   .about-contact-title {
@@ -577,6 +590,12 @@ ul {
     font-style: normal;
     color: #344563;
     margin: 0 40px 0 40px;
+  }
+
+  .favicons-container-about {
+    margin: 0 260px 0 10px;
+    display: flex;
+    justify-content: left;
   }
 
   .languages-info {
@@ -625,6 +644,6 @@ ul {
   }
 
   .form-paragraph {
-    margin: 0 100px 0 100px
+    margin: 0 100px 0 100px;
   }
 }
