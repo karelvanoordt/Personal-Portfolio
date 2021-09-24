@@ -453,12 +453,23 @@ ul {
 
 /* RESPONSIVE FOR DESKTOP AND LAPTOP */
 @media screen and (max-width: 1024px) {
-  .desktop-navbar {
+  .toolbar-desktop {
     display: none;
   }
 }
 
 @media screen and (min-width: 1024px) {
+  .toolbar-container {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+  
+  
+  
+  
   .body {
     background-size: 100%;
     background-repeat: no-repeat;
@@ -516,11 +527,24 @@ ul {
   }
 
   .work-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    height: 400px;
+    display: flex;
+    flex-direction: row;
+    width: 85%;
     column-gap: 15px;
+
+    
+  }
+
+  .work-card-B {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 85%;
+    column-gap: 15px;
+  }
+
+  .work-card-B .work-1-img {
+    width: 100%;
+    justify-content: right;
   }
 
   .work-1-img {
