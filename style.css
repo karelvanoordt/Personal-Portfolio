@@ -62,6 +62,44 @@ body {
   font-style: normal;
   color: #172b4d;
   margin: 30px;
+  position: relative;
+  animation-name: myanimation;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: cubic-bezier(0.26, -0.35, 0.99, 1.54);
+}
+
+@keyframes myanimation {
+  0% {
+    background-color: white;
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    background-color: red;
+    top: 0;
+    left: 200px;
+  }
+
+  50% {
+    background-color: green;
+    top: 200px;
+    left: 200px;
+  }
+
+  75% {
+    background-color: blue;
+    top: 200px;
+    left: 0;
+  }
+
+  100% {
+    background-color: white;
+    top: 0;
+    left: 0;
+  }
 }
 
 .content-container {
