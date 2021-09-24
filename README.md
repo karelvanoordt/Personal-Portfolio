@@ -2,9 +2,9 @@
 
 # Portfolio Mobile Page
 
-As a part of Microvers's Module 1, I've built the second part of my personal portfolio, focused on the work that I've designed in the past.
+As a part of Microvers's Module 1, I've added the necessary media queries to make the page responsive to both mobile and desktop devices.
 
-![screenshot](./Screenshot 2.png)
+![screenshot](./desktop.png)
 
 
 ## Built With

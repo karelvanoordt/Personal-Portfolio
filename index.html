@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">  <link rel="stylesheet" href="style.css">
 
 </head>
@@ -12,15 +13,23 @@
 <body>
   <section class="main-header">
     
-      <nav class="toolbar-container">
-        
-        <a class="toolbar-logo" href=#>
-          <p class="Logo">My Logo</p>
-        </a>
+      <nav class="navbar-mobile">
+          <a class="mobile-logo">My Logo</a>
+          
+          <a class="toolbar-button" href=#>
+            <img src="images/header/toolbar/Union-button.png" alt="toolbar button">
+          </a>
+      </nav>
 
-        <a class="toolbar-button" href=#>
-          <img src="images/header/toolbar/Union-button.png" alt="toolbar button">
-        </a>
+      <nav class="navbar-desktop">
+
+          <a class="desktop-logo">My Logo</a>
+
+          <div class="navbar-options">
+              <a class="nav-option" href="#">Portfolio</a>
+              <a class="nav-option" href="#">About</a>
+              <a class="nav-option" href="#">Contact</a>
+          </div>
       </nav>
     
     
@@ -31,7 +40,7 @@
 
     
       <div class="content-container">
-        <p class="content">I'm a software developer based in Lima, Peru. I can help you build a product, feature or website.
+        <p class="content-paragraph">I'm a software developer based in Lima, Peru. I can help you build a product, feature or website.
         Take a look through some of my work and professional experience.
         If you would are interested in my services, don't hesitate to contact me.
       </div>
@@ -54,10 +63,11 @@
  
   
   <section class="works">
-      <div class="work-card">
+      <div class="work-card work-card-A">
           <div class="work-img">
             <img class="work-1-img" src="images/work/screenshot/snapshot-1.png" alt="Tonic Work">
           </div>
+          <div class="work-info">
           <h2 class="work-title">Tonic</h2>
           <div class="details-container">
                 <h5>CANOPY</h5>
@@ -78,15 +88,15 @@
           <div class="work-button">
             <button type="button" class="project-button">See Project</button>
           </div>
-            
-
+        </div>
 
       </div>
 
-      <div class="work-card">
+      <div class="work-card work-card-B">
         <div class="work-img">
           <img class="work-1-img" src="images/work/screenshot/snapshot-2.png" alt="Multi Post stories">
         </div>
+        <div class="work-info">
         <h2 class="work-title">Multi-Post Stories</h2>
         <div class="details-container">
           <h5>CANOPY</h5>
@@ -107,15 +117,16 @@
         <div class="work-button">
           <button type="button" class="project-button">See Project</button>
         </div>
-          
+      </div>    
 
 
       </div>
 
-      <div class="work-card">
+      <div class="work-card work-card-A">
         <div class="work-img">
           <img class="work-1-img" src="images/work/screenshot/snapshot-3.png" alt="Tonic">
         </div>
+        <div class="work-info">
         <h2 class="work-title">Tonic</h2>
         <div class="details-container">
           <h5>CANOPY</h5>
@@ -132,19 +143,20 @@
               <button type="button" class="lang">JavaScript</button>  
             </div>
         </div>
-
+      
         <div class="work-button">
           <button type="button" class="project-button">See Project</button>
         </div>
           
-
+      </div>
 
     </div>
 
-    <div class="work-card">
+    <div class="work-card work-card-B">
       <div class="work-img">
         <img class="work-1-img" src="images/work/screenshot/snapshot-4.png" alt="Multi Post stories">
       </div>
+      <div class="work-info">
       <h2 class="work-title">Multi-Post Stories</h2>
       <div class="details-container">
         <h5>CANOPY</h5>
@@ -166,7 +178,7 @@
         <button type="button" class="project-button">See Project</button>
       </div>
         
-
+    </div>
 
     </div>
 
@@ -174,36 +186,41 @@
   </section>
 
   <section class="about">
-    <div class="header-container">
-      <h2 class="portfolio-header">About Myself</h2>
+
+    <div class="about-info">
+      <div class="header-container">
+        <h2 class="portfolio-header about-header">About Myself</h2>
+      </div>
+
+
+
+      <div class="content-container">
+        <p class="about-paragraph">I'm a software developer based in Lima, Peru. I can help you build a product, feature or website.
+        Take a look through some of my work and professional experience.
+        If you would are interested in my services, don't hesitate to contact me.
+      </div>
+
+
+
+      <div class="contact-container">
+        <h4 class="about-contact-title">LET'S CONNECT!</h4>
+      </div>
+
+      <div class="favicons-container-about">
+        <img class="favicon tw" src="images/header/social/Twitter-logo.png" alt="Twitter Icon">
+        <img class="favicon lk" src="images/header/social/Linkedin-logo.png" alt="Linkedin Icon">
+        <img class="favicon md" src="images/header/social/Medium-logo.png" alt="Medium Icon">
+        <img class="favicon gh" src="images/header/social/Github-logo.png" alt="GitHub Icon">
+        <img class="favicon ve" src="images/header/social/Vector-logo.png" alt="Vector Icon">
+      </div>
+
+      <div class="cont-resume-button">
+        <button type="button" class="project-button">Get my resume</button>
+      </div>
+
     </div>
 
-
-
-  <div class="content-container">
-    <p class="content">I'm a software developer based in Lima, Peru. I can help you build a product, feature or website.
-    Take a look through some of my work and professional experience.
-    If you would are interested in my services, don't hesitate to contact me.
-  </div>
-
-
-
-  <div class="contact-container">
-    <h4 class="contact-title">LET'S CONNECT!</h4>
-  </div>
-
-  <div class="favicons-container">
-    <img class="favicon tw" src="images/header/social/Twitter-logo.png" alt="Twitter Icon">
-    <img class="favicon lk" src="images/header/social/Linkedin-logo.png" alt="Linkedin Icon">
-    <img class="favicon md" src="images/header/social/Medium-logo.png" alt="Medium Icon">
-    <img class="favicon gh" src="images/header/social/Github-logo.png" alt="GitHub Icon">
-    <img class="favicon ve" src="images/header/social/Vector-logo.png" alt="Vector Icon">
-  </div>
-
-  <div class="cont-resume-button">
-    <button type="button" class="project-button">Get my resume</button>
-  </div>
-
+<div class="languages-info">
 
   <div class="option languages">
     <h3 class="languages-title">Languages</h3>
@@ -239,12 +256,14 @@
     </div>
     <hr class="separator">
   </div>
+
+</div>
   </section>
 
   <section class="main-form">
     <div class="form-container">
       <h3 class="contact-me-title">Contact me</h3>
-      <p class="contact-paragraph">If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it </p>
+      <p class="contact-paragraph form-paragraph">If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it </p>
       <form class="contact-form" action="https://formspree.io/f/mnqlwobn" method="post">
         <input name="name" id="name" class="input-text" type="text" placeholder="Enter your name" maxlength="30" required>
         <input name="email" id="email" class="input-text" type="email" placeholder="Email adress" required>
