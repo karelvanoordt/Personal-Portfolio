@@ -11,8 +11,6 @@ body {
   background-color: #e5e5e5;
   margin-left: auto;
   margin-right: auto;
-
-  /* max-width: 500px; */
 }
 
 .main-header {
@@ -25,7 +23,7 @@ body {
   padding-bottom: 20px;
 }
 
-.toolbar-container {
+.navbar-mobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +33,7 @@ body {
   margin: 30px;
 }
 
-.Logo {
+.navbar-logo {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -44,7 +42,7 @@ body {
   text-align: left;
 }
 
-.toolbar-logo {
+.navbar-logo-link {
   text-decoration: none;
 }
 
@@ -453,19 +451,15 @@ ul {
 
 /* RESPONSIVE FOR DESKTOP AND LAPTOP */
 @media screen and (max-width: 1024px) {
-  .toolbar-desktop {
+ 
+  .navbar-desktop {
     display: none;
   }
+
 }
 
 @media screen and (min-width: 1024px) {
-  .toolbar-container {
-    display: none;
-  }
-
-  .logo {
-    display: none;
-  }
+ 
   
   .body {
     background-size: 100%;
@@ -554,13 +548,14 @@ ul {
     grid-template-columns: 40% 60%;
   }
 
-  .about-header {
-    justify-content: left;
-  }
-
   .about-info {
     display: flex;
     flex-direction: column;
+  }
+
+  .header-container {
+    justify-content: left;
+    margin: 20px 0 10px 10px;
   }
 
   .about-contact-title {
@@ -571,6 +566,7 @@ ul {
     font-size: 16px;
     line-height: 24px;
     display: flex;
+    justify-content: left;
   }
 
   .about-paragraph {
@@ -591,6 +587,10 @@ ul {
 
   .languages-title {
     vertical-align: bottom;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 70px 0 30px 0;
   }
 
   .languages-list {
@@ -614,6 +614,7 @@ ul {
 
   .frameworks-skills {
     grid-row: 3;
+    margin-bottom: 0;
   }
 
   .lang-img {
@@ -621,5 +622,9 @@ ul {
     flex-direction: column;
     width: 50px;
     height: 50px;
+  }
+
+  .form-paragraph {
+    margin: 0 100px 0 100px
   }
 }
