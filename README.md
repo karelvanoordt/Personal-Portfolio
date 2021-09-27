@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Portfolio Mobile Page
+# Personal Portfolio (Desktop & Mobile Responsive version)
 
 As a part of Microvers's Module 1, I've added the necessary media queries to make the page responsive to both mobile and desktop devices.
 
@@ -15,7 +15,7 @@ As a part of Microvers's Module 1, I've added the necessary media queries to mak
 
 ## Live Demo
 
-[Live Demo Link](https://karelvanoordt.github.io/Portfolio-mobile-version/)
+[Live Demo Link](https://karelvanoordt.github.io/Personal-Portfolio/)
 
 
 ## Getting Started
