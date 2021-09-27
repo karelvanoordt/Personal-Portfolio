@@ -2,7 +2,7 @@
 
 # Personal Portfolio (Desktop & Mobile Responsive version)
 
-As a part of Microvers's Module 1, I've added the necessary media queries to make the page responsive to both mobile and desktop devices.
+For this part of my Personal Portfolio project, I've updated the live demo link for the page to be available for everyone at GitHub. Users can access the link below.
 
 ![screenshot](./desktop.png)
 
