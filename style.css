@@ -419,6 +419,14 @@ ul {
   margin-bottom: 20px;
 }
 
+.input-message:focus,
+.input-text:focus {
+  outline: none;
+  background-color: gold;
+  color: black;
+  border: none;
+}
+
 .submit-button {
   background-color: #fff;
   height: 60px;
