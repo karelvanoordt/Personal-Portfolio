@@ -15,17 +15,19 @@ function mobileMenu () {
        toolbarButton.style.display ='none';
 
         layout.innerHTML += 
-        `<div class="menu">
-        <a class="exit-link" href="#" id="exit-link">
-        <img src="images/mobile-menu/exit-icon.png" alt="exit" id="exit-menu">
-        </a>
+        `<nav class="menu">
+        <div class="nav-container">
+          <a class="exit-link" href="#" id="exit-link">
+            <img class="exit-img" src="images/mobile-menu/exit-icon.png" alt="exit" id="exit-menu">
+          </a>
 
-        <ul class="menu-items">
-           <li class="menu-option"><a href="#portfolio-header">Portfolio</a></li>
-           <li class="menu-option"><a href="#about">About</a></li> 
-           <li class="menu-option"><a href="#contact-container">Contact</a></li> 
-        </ul>
-        </div>`
+          <ul class="menu-items">
+            <li ><a class="menu-option" href="#portfolio-header">Portfolio</a></li>
+            <li ><a class="menu-option" href="#about">About</a></li> 
+            <li ><a class="menu-option" href="#contact-container">Contact</a></li> 
+          </ul>
+        </div>
+        </nav>`
 
 }else {
   console.log('click here');

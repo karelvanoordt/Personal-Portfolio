@@ -43,14 +43,45 @@ body {
 }
 
 .menu {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background-color: #6070ff;
   opacity: 0.8;
   height: 100vh;
-  margin: -40px;
   width: 100%;
+}
+
+.nav-container {
+  position:fixed;
+}
+
+.menu-items {
+  position: fixed;
+  font-family: Poppins;
+  font-size: 28px;
+  /* background-color: #6070ff; */
+  /* opacity: 0.9; */
+  /* height: 100vh;
+  margin: -20px 0 0 -40px;
+  width: 100%; */
+  color: white;
+} 
+
+.menu-option {
+  text-decoration: none;
+  color: white;
+  opacity: 1;
+}
+
+.exit-link {
   position: fixed;
 }
+
+.exit-img {
+  height: 20px;
+  margin-left: 440px;
+}
+
 
 .header-container {
   display: flex;
