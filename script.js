@@ -29,14 +29,44 @@ for (let i = 0; i < links.length; i += 1) {
   });
 }
 
-// const details = {
-//   name: '',
-//   description: '',
-//   image: '',
-//   technologies: [],
-//   link: '',
-//   source: '',
-// };
+const details = [{
+  name: 'Tonic',
+  description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+  image: 'images/work/screenshot/snapshot-1.png',
+  technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
+  link: '#',
+  source: '#',
+},
+
+{
+  name: 'Multi Post Stories',
+  description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+  image: 'images/work/screenshot/snapshot-2.png',
+  technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
+  link: '#',
+  source: '#',
+},
+
+{
+  name: 'Tonic',
+  description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+  image: 'images/work/screenshot/snapshot-3.png',
+  technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
+  link: '#',
+  source: '#',
+},
+
+{
+  name: 'Multi Post Stories ',
+  description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+  image: 'images/work/screenshot/snapshot-4.png',
+  technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
+  link: '#',
+  source: '#',
+}
+]
+
+
 
 const openButton = document.querySelector('.project-button');
 const projectContainer = document.getElementById('works');
@@ -49,6 +79,11 @@ function closeModal() {
 }
 
 openButton.addEventListener('click', () => {
+
+  //for loop to find the correct 
+
+
+
   // backdrop
   modalBackdrop = document.createElement('div');
   modalBackdrop.classList.add('modal-backdrop');
@@ -60,7 +95,7 @@ openButton.addEventListener('click', () => {
   modal.classList.add('modal');
   // Heading
   const heading = document.createElement('h3');
-  heading.textContent = 'Tonic';
+  heading.textContent = '';
   modal.appendChild(heading);
 
   // Technologies
