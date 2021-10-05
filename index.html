@@ -5,63 +5,78 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Karel's Portfolio Home Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">  <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
   <section class="main-header">
 
-      <nav class="navbar-mobile">
-          <a class="mobile-logo">My Logo</a>
-          
-          <a class="toolbar-button" href=#>
-            <img src="images/header/toolbar/Union-button.png" alt="toolbar menu">
+        <nav class="navbar-mobile" id="navbar-mobile">
+            <a class="mobile-logo" id="mobile-logo">Karel van Oordt</a>
+            
+            <a class="toolbar-button hamburger" href=# id="hamburger">
+              <img src="images/header/toolbar/Union-button.png" alt="toolbar menu">
+            </a>
+        </nav>
+
+      
+        <nav class="navbar-menu display-none">
+          <div class="backdrop display-none"></div>
+          <a class="exit-link" href="#" id="exit-link">
+            X
           </a>
-      </nav>
 
-      <nav class="navbar-desktop">
+          <ul class="menu-items">
+            <li class="menu-list-option"><a class="menu-option" href="#portfolio">Portfolio</a></li> 
+            <li class="menu-list-option"><a class="menu-option" href="#about">About</a></li> 
+            <li class="menu-list-option"><a class="menu-option" href="#contact-container">Contact</a></li> 
+          </ul>
+        </nav>
+     
 
-          <a class="desktop-logo">My Logo</a>
+        <nav class="navbar-desktop">
+
+          <a class="desktop-logo">Karel van Oordt</a>
 
           <div class="navbar-options">
               <a class="nav-option" href="#">Portfolio</a>
               <a class="nav-option" href="#">About</a>
               <a class="nav-option" href="#">Contact</a>
           </div>
-      </nav>
+        </nav>
     
     
         <div class="header-container">
-          <h1 class="portfolio-header">Hello! I'm Karel van Oordt</h1>
+          <h1 class="portfolio-header" id="portfolio-header">Hello! I'm Karel van Oordt</h1>
         </div>
     
 
     
-      <div class="content-container">
-        <p class="content-paragraph">I'm a software developer based in Lima, Peru. I can help you build a product, feature or website.
-        Take a look through some of my work and professional experience.
-        If you would are interested in my services, don't hesitate to contact me.
-      </div>
+        <div class="content-container">
+          <p class="content-paragraph">I'm a software developer based in Lima, Peru. I can help you build a product, feature or website.
+          Take a look through some of my work and professional experience.
+          If you would are interested in my services, don't hesitate to contact me.
+        </div>
     
 
     
-      <div class="contact-container">
-        <h4 class="contact-title">LET'S CONNECT!</h4>
-      </div>
+        <div class="contact-container">
+          <h4 class="contact-title">LET'S CONNECT!</h4>
+        </div>
 
-      <div class="favicons-container">
-        <img class="favicon tw" src="images/header/social/Twitter-logo.png" alt="Twitter">
-        <img class="favicon lk" src="images/header/social/Linkedin-logo.png" alt="Linkedin ">
-        <img class="favicon md" src="images/header/social/Medium-logo.png" alt="Medium">
-        <img class="favicon gh" src="images/header/social/Github-logo.png" alt="GitHub">
-        <img class="favicon ve" src="images/header/social/Vector-logo.png" alt="Vector">
-      </div>
+        <div class="favicons-container">
+          <img class="favicon tw" src="images/header/social/Twitter-logo.png" alt="Twitter">
+          <img class="favicon lk" src="images/header/social/Linkedin-logo.png" alt="Linkedin ">
+          <img class="favicon md" src="images/header/social/Medium-logo.png" alt="Medium">
+          <img class="favicon gh" src="images/header/social/Github-logo.png" alt="GitHub">
+          <img class="favicon ve" src="images/header/social/Vector-logo.png" alt="Vector">
+        </div>
   </section>      
     
  
   
-  <section class="works">
+  <section class="works" id="works">
       <div class="work-card work-card-A">
           <div class="work-img">
             <img class="work-1-img" src="images/work/screenshot/snapshot-1.png" alt="Tonic project">
@@ -184,14 +199,12 @@
 
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
 
     <div class="about-info">
       <div class="header-container">
         <h1 class="portfolio-header about-header">About Myself</h1>
       </div>
-
-
 
       <div class="content-container">
         <p class="about-paragraph">I'm a software developer based in Lima, Peru. I can help you build a product, feature or website.
@@ -199,9 +212,7 @@
         If you would are interested in my services, don't hesitate to contact me.
       </div>
 
-
-
-      <div class="contact-container">
+      <div class="contact-container" id="contact-container">
         <h4 class="about-contact-title">LET'S CONNECT!</h4>
       </div>
 
@@ -272,7 +283,7 @@
     </div>
   </section>
 
-
+<script type='text/JavaScript' src="script.js"></script>
 </body>
 
 </html>
