@@ -12,6 +12,7 @@ As a part of Microvers's Module 1, I've added the necessary media queries to mak
 - HTML
 - CSS
 - NodeJS
+- JavaScript
 
 ## Live Demo
 
