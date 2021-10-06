@@ -35,11 +35,13 @@ function validation() {
   const form = document.querySelector('.contact-form');
   const email = document.getElementById('email').value;
   const text = document.getElementById('text');
-  const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-  const lowerCase = /^[a-z]*$/;
+  // const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  // const lowerCase = /[a-z]+@+[a-z]+.+/;
+
+  const pattern = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/;
 
 
-  if (email.match(pattern) && email.match(lowerCase)) {
+  if (email.match(pattern)) {
     form.classList.add('valid');
     form.classList.remove('invalid');
     text.innerHTML = 'Valid Email';
