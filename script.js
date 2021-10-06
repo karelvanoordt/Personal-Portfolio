@@ -17,7 +17,7 @@ const closeMenu = document.querySelector('.exit-link');
 function close() {
   navbarMenu.classList.add('display-none');
   hamburger.classList.remove('display-none');
-}
+}git 
 
 closeMenu.addEventListener('click', close);
 
@@ -35,9 +35,6 @@ function validation() {
   const form = document.querySelector('.contact-form');
   const email = document.getElementById('email').value;
   const text = document.getElementById('text');
-  // const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-  // const lowerCase = /[a-z]+@+[a-z]+.+/;
-
   const pattern = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/;
 
 
@@ -51,10 +48,12 @@ function validation() {
     form.classList.remove('valid');
     text.innerHTML = 'Invalid Email';
     text.style.color = '#ff0000';
+
+
   }
-  if (email === '') {
-    form.classList.remove('invalid');
-    form.classList.remove('valid');
-    text.innerHTML = '';
-  }
+  // if (email === '') {
+  //   form.classList.remove('invalid');
+  //   form.classList.remove('valid');
+  //   text.innerHTML = '';
+  // }
 }
