@@ -1,12 +1,12 @@
 /* eslint-disable linebreak-style */
 const navbarMenu = document.querySelector('.navbar-menu');
 const openMenu = document.querySelector('.toolbar-button');
-const backdrop = document.querySelector('.backdrop');
+const modalBackdrop = document.querySelector('.backdrop');
 const hamburger = document.querySelector('.hamburger');
 
 function open() {
   navbarMenu.classList.remove('display-none');
-  backdrop.classList.remove('display-none');
+  modalBackdrop.classList.remove('display-none');
   hamburger.classList.add('display-none');
 }
 
@@ -77,8 +77,7 @@ const details = [{
 const openButton = document.querySelector('.project-button');
 const projectContainer = document.getElementById('works');
 
-let modalBackdrop;
-
+let modalBackground;
 
 // function closeModal() {
 //   if (modalBackdrop) {
@@ -89,97 +88,64 @@ let modalBackdrop;
   //for loop to find the correct index in object array
 
 
-for (let i = 0; i < details.length; i+=1) {
-
-openButton.addEventListener('click', () => {
-  modalBackdrop = document.createElement('div');
-  modalBackdrop.classList.add('modal-backdrop')
-
-  // modalBackdrop.addEventListener('click', closeModal);
-  document.body.insertBefore(modalBackdrop, projectContainer);
-  // Modal
-  const modal = document.createElement('div');
-  modal.classList.add('modal');
-  // Heading
-  const heading = document.createElement('h3');
-  heading.textContent = details[i].name;
-  modal.appendChild(heading);
-
-  // Characteristics
-  const charGroup = document.createElement('ul');
-  charGroup.classList.add('characteristics-container');
-  modal.appendChild(charGroup);
-
-  const char1 = document.createElement('li');
-  char1.textContent = details[i].characteristics[0];
-  char1.classList.add('char');
-  charGroup.appendChild(char1);
-
-  const char2 = document.createElement('li');
-  char2.textContent = details[i].characteristics[1]; //Add item from characteristics array
-  char2.classList.add('char');
-  charGroup.appendChild(char2);
-
-  const char3 = document.createElement('li');
-  char3.textContent = details[i].characteristics[2]; //Add item from characteristics array
-  char3.classList.add('char');
-  charGroup.appendChild(char3);
-
-  // paragraph
-  const description = document.createElement('p');
-  description.textContent = details[i].description; // Add description from object
-  description.classList.add('modal-description');
-  modal.appendChild(description);
-
-  // Technologies
-  const techGroup = document.createElement('ul');
-  techGroup.classList.add('technologies-container');
-  modal.appendChild(techGroup);
-
-  const techList1 = document.createElement('li');
-  techList1.textContent = details[i].technologies[0]; //Add item from technologies array
-  techList1.classList.add('techlist');
-  techGroup.appendChild(techList1);
-
-  const techList2 = document.createElement('li');
-  techList2.textContent = details[i].technologies[1]; //Add item from technologies array
-  techList2.classList.add('techlist');
-  techGroup.appendChild(techList2);
-
-  const techList3 = document.createElement('li');
-  techList3.textContent = details[i].technologies[2]; //Add item from technologies array
-  techList3.classList.add('techlist');
-  techGroup.appendChild(techList3);
-
-  // image
-  const image = document.createElement('img');
-  image.classList.add('modal-image');
-  image.src = details[0].image;
-  modal.appendChild(image);
-
-  // Buttons
-  const buttonContainer = document.createElement('div');
-  buttonContainer.classList.add('button-actions');
-  modal.appendChild(buttonContainer);
-
-  // Button 1
-  const button1 = document.createElement('button');
-  button1.setAttribute('type', 'button');
-  button1.textContent = 'See live';
-  button1.href = details[i].link;
-  button1.classList.add('buttonLink');
-  buttonContainer.appendChild(button1);
-
-  // Button 2
-  const button2 = document.createElement('button');
-  button2.setAttribute('type', 'button');
-  button2.textContent = 'See Source';
-  button2.href = details[i].source;
-  button2.classList.add('buttonSource');
-  buttonContainer.appendChild(button2);
-
-  // document.body.insertBefore(modal, projectContainer);
-  
-});
-
-}
+  for (let i = 0; i < details.length; i += 1) {
+    openButton.addEventListener('click', () => {
+      modalBackground = document.createElement('div');
+      modalBackground.classList.add('modal-background');
+      // backdrop.addEventListener('click', closeModal);
+      document.body.insertBefore(modalBackground, projectContainer);
+      // Modal
+      const modal = document.createElement('div');
+      modal.classList.add('modal');
+      // Heading
+      const heading = document.createElement('h2');
+      heading.textContent = details[i].name;
+      modal.appendChild(heading);
+      // Technologies
+      const techGroup = document.createElement('ul');
+      techGroup.classList.add('technologies-container');
+      modal.appendChild(techGroup);
+      // Tech groups
+      const techList1 = document.createElement('li');
+      techList1.textContent = details[i].technologies[0];
+      techList1.classList.add('techlist');
+      techGroup.appendChild(techList1);
+      const techList2 = document.createElement('li');
+      techList2.textContent = details[i].technologies[1];
+      techList2.classList.add('techlist');
+      techGroup.appendChild(techList2);
+      const techList3 = document.createElement('li');
+      techList3.textContent = details[i].technologies[2];
+      techList3.classList.add('techlist');
+      techGroup.appendChild(techList3);
+      // paragraph
+      const description = document.createElement('p');
+      description.textContent = details[i].description;
+      description.classList.add('modal-description');
+      modal.appendChild(description);
+      // image
+      const image = document.createElement('img');
+      image.classList.add('modal-image');
+      image.src = details[i].image;
+      modal.appendChild(image);
+      // Buttons
+      const buttonContainer = document.createElement('div');
+      buttonContainer.classList.add('button-actions');
+      modal.appendChild(buttonContainer);
+      // Button 1
+      const button1 = document.createElement('button');
+      button1.setAttribute('type', 'button');
+      button1.classList.add('buttonLink');
+      button1.textContent = 'Live link';
+      button1.href = details[i].link;
+      buttonContainer.appendChild(button1);
+      // Button 2
+      const button2 = document.createElement('button');
+      button2.setAttribute('type', 'button');
+      button2.classList.add('buttonSource');
+      button2.href = details[i].source;
+      button2.textContent = 'Source link';
+      buttonContainer.appendChild(button2);
+      document.body.insertBefore(modal, projectContainer);
+    });
+  }
