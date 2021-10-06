@@ -29,6 +29,8 @@ for (let i = 0; i < links.length; i += 1) {
   });
 }
 
+//pop-up
+
 const details = [{
   name: 'Tonic',
   description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
@@ -67,91 +69,92 @@ const details = [{
   characteristics: ['CANOPY', 'Back End Dev', '2015'],
   link: '#',
   source: '#',
-}
-]
+},
+];
 
 
 
 const openButton = document.querySelector('.project-button');
 const projectContainer = document.getElementById('works');
+
 let modalBackdrop;
-let modal;
-function closeModal() {
-  if (modalBackdrop) {
-    modalBackdrop.remove();
-  }
-}
+
+
+// function closeModal() {
+//   if (modalBackdrop) {
+//     modalBackdrop.remove();
+//   }
+// }
 
   //for loop to find the correct index in object array
+
 
 for (let i = 0; i < details.length; i+=1) {
 
 openButton.addEventListener('click', () => {
-
-  // backdrop
   modalBackdrop = document.createElement('div');
-  modalBackdrop.classList.add('modal-backdrop');
-  modalBackdrop.addEventListener('click', closeModal);
+  modalBackdrop.classList.add('modal-backdrop')
+
+  // modalBackdrop.addEventListener('click', closeModal);
   document.body.insertBefore(modalBackdrop, projectContainer);
   // Modal
-
-  modal = document.createElement('div');
+  const modal = document.createElement('div');
   modal.classList.add('modal');
   // Heading
   const heading = document.createElement('h3');
-  heading.textContent = i.name; // array item for name
+  heading.textContent = details[i].name;
   modal.appendChild(heading);
 
   // Characteristics
-  const characteristics = document.createElement('ul');
-  characteristics.classList.add('characteristics-container');
-  modal.appendChild(characteristics);
+  const charGroup = document.createElement('ul');
+  charGroup.classList.add('characteristics-container');
+  modal.appendChild(charGroup);
 
   const char1 = document.createElement('li');
-  char1.textContent = i.characteristics[0]; //Add item from characteristics array
+  char1.textContent = details[i].characteristics[0];
   char1.classList.add('char');
-  characteristics.appendChild(char1);
+  charGroup.appendChild(char1);
 
   const char2 = document.createElement('li');
-  char2.textContent = i.characteristics[1]; //Add item from characteristics array
+  char2.textContent = details[i].characteristics[1]; //Add item from characteristics array
   char2.classList.add('char');
-  characteristics.appendChild(char2);
+  charGroup.appendChild(char2);
 
   const char3 = document.createElement('li');
-  char3.textContent = i.characteristics[2]; //Add item from characteristics array
+  char3.textContent = details[i].characteristics[2]; //Add item from characteristics array
   char3.classList.add('char');
-  characteristics.appendChild(char3);
+  charGroup.appendChild(char3);
 
   // paragraph
   const description = document.createElement('p');
-  description.textContent = i.description; // Add description from object
+  description.textContent = details[i].description; // Add description from object
   description.classList.add('modal-description');
   modal.appendChild(description);
 
   // Technologies
-  const technologies = document.createElement('ul');
-  technologies.classList.add('technologies-container');
-  modal.appendChild(technologies);
+  const techGroup = document.createElement('ul');
+  techGroup.classList.add('technologies-container');
+  modal.appendChild(techGroup);
 
   const techList1 = document.createElement('li');
-  techList1.textContent = i.technologies[0]; //Add item from technologies array
+  techList1.textContent = details[i].technologies[0]; //Add item from technologies array
   techList1.classList.add('techlist');
-  technologies.appendChild(techList1);
+  techGroup.appendChild(techList1);
 
   const techList2 = document.createElement('li');
-  techList2.textContent = i.technologies[1]; //Add item from technologies array
+  techList2.textContent = details[i].technologies[1]; //Add item from technologies array
   techList2.classList.add('techlist');
-  technologies.appendChild(techList2);
+  techGroup.appendChild(techList2);
 
   const techList3 = document.createElement('li');
-  techList3.textContent = i.technologies[2]; //Add item from technologies array
+  techList3.textContent = details[i].technologies[2]; //Add item from technologies array
   techList3.classList.add('techlist');
-  technologies.appendChild(techList3);
+  techGroup.appendChild(techList3);
 
   // image
   const image = document.createElement('img');
   image.classList.add('modal-image');
-  image.src = i.image; // Add image
+  image.src = details[0].image;
   modal.appendChild(image);
 
   // Buttons
@@ -163,6 +166,7 @@ openButton.addEventListener('click', () => {
   const button1 = document.createElement('button');
   button1.setAttribute('type', 'button');
   button1.textContent = 'See live';
+  button1.href = details[i].link;
   button1.classList.add('buttonLink');
   buttonContainer.appendChild(button1);
 
@@ -170,11 +174,12 @@ openButton.addEventListener('click', () => {
   const button2 = document.createElement('button');
   button2.setAttribute('type', 'button');
   button2.textContent = 'See Source';
+  button2.href = details[i].source;
   button2.classList.add('buttonSource');
   buttonContainer.appendChild(button2);
 
-  document.body.insertBefore(modal, projectContainer);
+  // document.body.insertBefore(modal, projectContainer);
   
-})
+});
 
 }
