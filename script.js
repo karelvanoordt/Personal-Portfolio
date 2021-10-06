@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 const navbarMenu = document.querySelector('.navbar-menu');
 const openMenu = document.querySelector('.toolbar-button');
 const backdrop = document.querySelector('.backdrop');
@@ -28,18 +29,28 @@ for (let i = 0; i < links.length; i += 1) {
   });
 }
 
-
-//Email Validation
+// Email Validation
 
 function validation() {
-
-const form = document.querySelector('.contact-form');
-const email = document.getElementById('email').value;
-const text = document.getElementById('text');
-const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-
-if ()
+  const form = document.querySelector('.contact-form');
+  const email = document.getElementById('email').value;
+  const text = document.getElementById('text');
+  const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  const lowerCase = /^[a-z]*$/;
 
 
-
+  if (email.match(pattern) && email.match(lowerCase)) {
+    form.classList.add('valid');
+    form.classList.remove('invalid');
+    text.innerHTML = 'Valid Email';
+  } else {
+    form.classList.add('invalid');
+    form.classList.remove('valid');
+    text.innerHTML = 'Invalid Email';
+  }
+  if (email === '') {
+    form.classList.remove('invalid');
+    form.classList.remove('valid');
+    text.innerHTML = '';
+  }
 }
