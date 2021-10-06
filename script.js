@@ -27,3 +27,19 @@ for (let i = 0; i < links.length; i += 1) {
     navbarMenu.classList.add('display-none');
   });
 }
+
+
+//Email Validation
+
+function validation() {
+
+const form = document.querySelector('.contact-form');
+const email = document.getElementById('email').value;
+const text = document.getElementById('text');
+const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+if ()
+
+
+
+}
