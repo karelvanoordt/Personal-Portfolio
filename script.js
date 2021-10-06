@@ -45,10 +45,12 @@ function validation() {
     form.classList.add('valid');
     form.classList.remove('invalid');
     text.innerHTML = 'Valid Email';
+    text.style.color = '#00ff00';
   } else {
     form.classList.add('invalid');
     form.classList.remove('valid');
     text.innerHTML = 'Invalid Email';
+    text.style.color = '#ff0000';
   }
   if (email === '') {
     form.classList.remove('invalid');
