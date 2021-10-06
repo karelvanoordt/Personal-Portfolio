@@ -17,7 +17,7 @@ const closeMenu = document.querySelector('.exit-link');
 function close() {
   navbarMenu.classList.add('display-none');
   hamburger.classList.remove('display-none');
-}git 
+}
 
 closeMenu.addEventListener('click', close);
 
@@ -29,31 +29,18 @@ for (let i = 0; i < links.length; i += 1) {
   });
 }
 
-// Email Validation
+const form = document.querySelector('.contact-form');
+const errorMsg = document.getElementById('text');
+const email = document.getElementById('email');
 
-function validation() {
-  const form = document.querySelector('.contact-form');
-  const email = document.getElementById('email').value;
-  const text = document.getElementById('text');
+form.addEventListener('submit', (event) => {
   const pattern = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/;
-
-
-  if (email.match(pattern)) {
-    form.classList.add('valid');
-    form.classList.remove('invalid');
-    text.innerHTML = 'Valid Email';
-    text.style.color = '#00ff00';
+  if (email.value.match(pattern)) {
+    errorMsg.innerHTML = 'This is a valid Email';
+    errorMsg.style.color = '#00ff00';
   } else {
-    form.classList.add('invalid');
-    form.classList.remove('valid');
-    text.innerHTML = 'Invalid Email';
-    text.style.color = '#ff0000';
-
-
+    event.preventDefault();
+    errorMsg.innerHTML = 'Not a valid Email';
+    errorMsg.style.color = '#ff0000';
   }
-  // if (email === '') {
-  //   form.classList.remove('invalid');
-  //   form.classList.remove('valid');
-  //   text.innerHTML = '';
-  // }
-}
+});
