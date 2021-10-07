@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 const navbarMenu = document.querySelector('.navbar-menu');
 const openMenu = document.querySelector('.toolbar-button');
 const backdrop = document.querySelector('.backdrop');
@@ -29,6 +28,8 @@ for (let i = 0; i < links.length; i += 1) {
   });
 }
 
+//email validation
+
 const form = document.querySelector('.contact-form');
 const errorMsg = document.getElementById('text');
 const email = document.getElementById('email');
@@ -44,3 +45,29 @@ form.addEventListener('submit', (event) => {
     errorMsg.style.color = '#ff0000';
   }
 });
+
+// preserve data in local storage
+
+const inputName = document.getElementById('name');
+const inputEmail = document.getElementById('email');
+const inputMsg = document.getElementById('message');
+
+const addForm = (event) => {
+  event.preventDefault();
+  const data = {
+    name: inputName.value,
+    email: inputEmail.value,
+    message: inputMsg.value,
+  };
+  localStorage.setItem('Form data', JSON.stringify(data));
+};
+form.addEventListener('change', addForm);
+document.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('Form data') !== null) {
+    const getData = JSON.parse(localStorage.getItem('Form data'));
+    inputName.value = getData.name;
+    inputEmail.value = getData.email;
+    inputMsg.value = getData.message;
+  }
+});
+
