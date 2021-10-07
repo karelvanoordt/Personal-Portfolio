@@ -1,6 +1,4 @@
-/* eslint-disable linebreak-style */
-
-//navigation menu
+//navigation menu CORRECT
 const navbarMenu = document.querySelector('.navbar-menu');
 const openMenu = document.querySelector('.toolbar-button');
 const modalBackdrop = document.querySelector('.backdrop');
@@ -31,7 +29,7 @@ for (let i = 0; i < links.length; i += 1) {
   });
 }
 
-//validation form
+//validation form CORRECT
 
 const form = document.querySelector('.contact-form');
 const errorMsg = document.getElementById('text');
@@ -94,7 +92,7 @@ const details = [{
 
 
 
-const openButton = document.querySelectorAll('.project-button');
+const openButton = document.querySelector('.project-button');
 const projectContainer = document.getElementById('works');
 
 let modalBackground;
@@ -106,7 +104,7 @@ let modalBackground;
       modalBackground = document.createElement('div');
       modalBackground.classList.add('modal-background');
       // backdrop.addEventListener('click', closeModal);
-      document.body.insertBefore(modalBackground, projectContainer);
+      document.body.insertBefore(modalBackground, );
       // Modal
       const modal = document.createElement('div');
       modal.classList.add('modal');
