@@ -29,8 +29,7 @@ for (let i = 0; i < links.length; i += 1) {
   });
 }
 
-//validation form CORRECT
-
+//validation form
 const form = document.querySelector('.contact-form');
 const errorMsg = document.getElementById('text');
 const email = document.getElementById('email');
@@ -47,6 +46,31 @@ form.addEventListener('submit', (event) => {
   }
 });
 
+// preserve data in local storage
+const inputName = document.getElementById('name');
+const inputEmail = document.getElementById('email');
+const inputMsg = document.getElementById('message');
+
+const addForm = (event) => {
+  event.preventDefault();
+  const data = {
+    name: inputName.value,
+    email: inputEmail.value,
+    message: inputMsg.value,
+  };
+  localStorage.setItem('Form data', JSON.stringify(data));
+};
+form.addEventListener('change', addForm);
+document.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('Form data') !== null) {
+    const getData = JSON.parse(localStorage.getItem('Form data'));
+    inputName.value = getData.name;
+    inputEmail.value = getData.email;
+    inputMsg.value = getData.message;
+  }
+});
+
+
 //pop-up
 
 const details = [{
@@ -54,7 +78,7 @@ const details = [{
   description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
   image: 'images/work/screenshot/snapshot-1.png',
   technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
-  characteristics: ['CANOPY', 'Back End Dev', '2015'],
+  milestones: ['CANOPY', 'Back End Dev', '2015'],
   link: '#',
   source: '#',
 },
@@ -64,7 +88,7 @@ const details = [{
   description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
   image: 'images/work/screenshot/snapshot-2.png',
   technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
-  characteristics: ['CANOPY', 'Back End Dev', '2015'],
+  milestones: ['CANOPY', 'Back End Dev', '2015'],
   link: '#',
   source: '#',
 },
@@ -74,7 +98,7 @@ const details = [{
   description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
   image: 'images/work/screenshot/snapshot-3.png',
   technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
-  characteristics: ['CANOPY', 'Back End Dev', '2015'],
+  milestones: ['CANOPY', 'Back End Dev', '2015'],
   link: '#',
   source: '#',
 },
@@ -84,7 +108,7 @@ const details = [{
   description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
   image: 'images/work/screenshot/snapshot-4.png',
   technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
-  characteristics: ['CANOPY', 'Back End Dev', '2015'],
+  milestones: ['CANOPY', 'Back End Dev', '2015'],
   link: '#',
   source: '#',
 },
@@ -106,7 +130,6 @@ let modalBackground;
       // backdrop.addEventListener('click', closeModal);
       document.body.insertBefore(modalBackground, projectContainer);     
 
-      // ^ NOT FIXED ^
 
       // Modal
       const modal = document.createElement('div');
@@ -116,7 +139,40 @@ let modalBackground;
       // Heading
       const heading = document.createElement('h2');
       heading.textContent = details[i].name;
+      heading.classList.add('modal-heading');
       modal.appendChild(heading);
+      // Milestones
+      const milestonesGroup = document.createElement('ul');
+      milestonesGroup.classList.add('milestones-container');
+      modal.appendChild(milestonesGroup);
+      // Milestones group
+      const miles1 = document.createElement('li');
+      miles1.textContent = details[i].milestones[0];
+      miles1.classList.add('mileslist');
+      miles1.classList.add('miles-caps')
+      milestonesGroup.appendChild(miles1);
+      const miles2 = document.createElement('li');
+      miles2.textContent = details[i].milestones[1];
+      miles2.classList.add('mileslist');
+      milestonesGroup.appendChild(miles2);
+      const miles3 = document.createElement('li');
+      miles3.textContent = details[i].milestones[2];
+      miles3.classList.add('mileslist');
+      milestonesGroup.appendChild(miles3);
+      // image container
+      const imageContainer = document.createElement('div');
+      imageContainer.classList.add('image-container');
+      modal.appendChild(imageContainer);
+      // image
+      const image = document.createElement('img');
+      image.classList.add('modal-image');
+      image.src = details[i].image;
+      imageContainer.appendChild(image);
+      // paragraph
+      const description = document.createElement('p');
+      description.textContent = details[i].description;
+      description.classList.add('modal-description');
+      modal.appendChild(description);
       // Technologies
       const techGroup = document.createElement('ul');
       techGroup.classList.add('technologies-container');
@@ -134,16 +190,6 @@ let modalBackground;
       techList3.textContent = details[i].technologies[2];
       techList3.classList.add('techlist');
       techGroup.appendChild(techList3);
-      // paragraph
-      const description = document.createElement('p');
-      description.textContent = details[i].description;
-      description.classList.add('modal-description');
-      modal.appendChild(description);
-      // image
-      const image = document.createElement('img');
-      image.classList.add('modal-image');
-      image.src = details[i].image;
-      modal.appendChild(image);
       // Buttons
       const buttonContainer = document.createElement('div');
       buttonContainer.classList.add('button-actions');
