@@ -28,8 +28,7 @@ for (let i = 0; i < links.length; i += 1) {
   });
 }
 
-//email validation
-
+// email validation
 const form = document.querySelector('.contact-form');
 const errorMsg = document.getElementById('text');
 const email = document.getElementById('email');
@@ -47,7 +46,6 @@ form.addEventListener('submit', (event) => {
 });
 
 // preserve data in local storage
-
 const inputName = document.getElementById('name');
 const inputEmail = document.getElementById('email');
 const inputMsg = document.getElementById('message');
@@ -70,4 +68,3 @@ document.addEventListener('DOMContentLoaded', () => {
     inputMsg.value = getData.message;
   }
 });
-
