@@ -1,4 +1,6 @@
 /* eslint-disable linebreak-style */
+
+//navigation menu
 const navbarMenu = document.querySelector('.navbar-menu');
 const openMenu = document.querySelector('.toolbar-button');
 const modalBackdrop = document.querySelector('.backdrop');
@@ -28,6 +30,24 @@ for (let i = 0; i < links.length; i += 1) {
     navbarMenu.classList.add('display-none');
   });
 }
+
+//validation form
+
+const form = document.querySelector('.contact-form');
+const errorMsg = document.getElementById('text');
+const email = document.getElementById('email');
+
+form.addEventListener('submit', (event) => {
+  const pattern = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/;
+  if (email.value.match(pattern)) {
+    errorMsg.innerHTML = 'This is a valid Email';
+    errorMsg.style.color = '#00ff00';
+  } else {
+    event.preventDefault();
+    errorMsg.innerHTML = 'Not a valid Email';
+    errorMsg.style.color = '#ff0000';
+  }
+});
 
 //pop-up
 
@@ -74,19 +94,12 @@ const details = [{
 
 
 
-const openButton = document.querySelector('.project-button');
+const openButton = document.querySelectorAll('.project-button');
 const projectContainer = document.getElementById('works');
 
 let modalBackground;
 
-// function closeModal() {
-//   if (modalBackdrop) {
-//     modalBackdrop.remove();
-//   }
-// }
-
-  //for loop to find the correct index in object array
-
+//for loop to find the correct index in object array
 
   for (let i = 0; i < details.length; i += 1) {
     openButton.addEventListener('click', () => {
