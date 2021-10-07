@@ -1,12 +1,12 @@
 //navigation menu CORRECT
 const navbarMenu = document.querySelector('.navbar-menu');
 const openMenu = document.querySelector('.toolbar-button');
-const modalBackdrop = document.querySelector('.backdrop');
+const menuBackdrop = document.querySelector('.menu-backdrop');
 const hamburger = document.querySelector('.hamburger');
 
 function open() {
   navbarMenu.classList.remove('display-none');
-  modalBackdrop.classList.remove('display-none');
+  menuBackdrop.classList.remove('display-none');
   hamburger.classList.add('display-none');
 }
 
@@ -104,10 +104,15 @@ let modalBackground;
       modalBackground = document.createElement('div');
       modalBackground.classList.add('modal-background');
       // backdrop.addEventListener('click', closeModal);
-      document.body.insertBefore(modalBackground, );
+      document.body.insertBefore(modalBackground, projectContainer);     
+
+      // ^ NOT FIXED ^
+
       // Modal
       const modal = document.createElement('div');
       modal.classList.add('modal');
+
+
       // Heading
       const heading = document.createElement('h2');
       heading.textContent = details[i].name;
