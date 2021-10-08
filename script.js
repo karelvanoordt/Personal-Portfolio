@@ -81,38 +81,7 @@ const details = [{
   milestones: ['CANOPY', 'Back End Dev', '2015'],
   link: '#',
   source: '#',
-},
-
-// {
-//   name: 'Multi Post Stories',
-//   description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries but also the leap into electronic typesetting remaining essent',
-//   image: 'images/work/screenshot/snapshot-2.png',
-//   technologies: ['html', 'css', 'javascript'],
-//   milestones: ['CANOPY', 'Back End Dev', '2015'],
-//   link: '#',
-//   source: '#',
-// },
-
-// {
-//   name: 'Tonic',
-//   description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries but also the leap into electronic typesetting remaining essent',
-//   image: 'images/work/screenshot/snapshot-3.png',
-//   technologies: ['html', 'css', 'javascript'],
-//   milestones: ['CANOPY', 'Back End Dev', '2015'],
-//   link: '#',
-//   source: '#',
-// },
-
-// {
-//   name: 'Multi Post Stories ',
-//   description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries but also the leap into electronic typesetting remaining essent',
-//   image: 'images/work/screenshot/snapshot-4.png',
-//   technologies: ['html', 'css', 'javascript'],
-//   milestones: ['CANOPY', 'Back End Dev', '2015'],
-//   link: '#',
-//   source: '#',
-// },
-];
+}];
 
 
 
@@ -125,6 +94,8 @@ let modalBackground;
 
   for (let i = 0; i < details.length; i += 1) {
     openButton.addEventListener('click', () => {
+
+      
       // body.classList.add('hide-scrollbar');
       modalBackground = document.createElement('div');
       modalBackground.classList.add('modal-background');
@@ -177,22 +148,29 @@ let modalBackground;
       milestonesGroup.appendChild(miles3);
       // image container
       const imageContainer = document.createElement('div');
-      imageContainer.classList.add('image-container');
+      imageContainer.classList.add('modal-image-container');
       modal.appendChild(imageContainer);
       // image
       const image = document.createElement('img');
       image.classList.add('modal-image');
       image.src = details[i].image;
       imageContainer.appendChild(image);
+      //botom row container
+      const botRow = document.createElement('div');
+      botRow.classList.add('modal-bot-row');
+      modal.appendChild(botRow);
       // paragraph
       const description = document.createElement('p');
       description.textContent = details[i].description;
       description.classList.add('modal-description');
-      modal.appendChild(description);
+      botRow.appendChild(description);
+      const column2 = document.createElement('div');
+      column2.classList.add('modal-col2');
+  
       // Technologies
       const techGroup = document.createElement('ul');
       techGroup.classList.add('technologies-container');
-      modal.appendChild(techGroup);
+      botRow.appendChild(techGroup);
       // Tech groups
       const techList1 = document.createElement('li');
       techList1.textContent = details[i].technologies[0];
@@ -208,11 +186,11 @@ let modalBackground;
       techGroup.appendChild(techList3);
       // Separator
       const separator = document.createElement('hr');
-      modal.appendChild(separator);
+      botRow.appendChild(separator);
       // Buttons
       const buttonContainer = document.createElement('div');
       buttonContainer.classList.add('button-actions');
-      modal.appendChild(buttonContainer);
+      botRow.appendChild(buttonContainer);
       // Button 1
       const button1 = document.createElement('button');
       button1.setAttribute('type', 'button');
@@ -234,7 +212,5 @@ let modalBackground;
         modalBackground.remove();
         modal.remove();
       });
-
     });
-
-  }
+}
