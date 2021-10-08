@@ -667,11 +667,6 @@ ul {
   border: none;
 }
 
-#text {
-  font-family: 'Poppins', sans-serif;
-  align-self: flex-start;
-}
-
 .submit-button {
   background-color: #fff;
   height: 60px;

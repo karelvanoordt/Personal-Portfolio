@@ -1,4 +1,4 @@
-//navigation menu CORRECT
+// navigation menu CORRECT
 const navbarMenu = document.querySelector('.navbar-menu');
 const openMenu = document.querySelector('.toolbar-button');
 const menuBackdrop = document.querySelector('.menu-backdrop');
@@ -28,7 +28,6 @@ for (let i = 0; i < links.length; i += 1) {
     navbarMenu.classList.add('display-none');
   });
 }
-
 
 const form = document.querySelector('.contact-form');
 const errorMsg = document.getElementById('text');
@@ -68,12 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
     inputEmail.value = getData.email;
     inputMsg.value = getData.message;
   }
-
 });
 
-
-//pop-up
-
+// pop-up
 const details = [{
   name: 'Tonic',
   description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries but also the leap into electronic typesetting remaining essent',
@@ -84,137 +80,128 @@ const details = [{
   source: '#',
 }];
 
-
-
 const openButton = document.querySelector('.project-button');
 const projectContainer = document.getElementById('works');
 
 let modalBackground;
 
-//for loop to find the correct index in object array
+for (let i = 0; i < details.length; i += 1) {
+  openButton.addEventListener('click', () => {
+    // body.classList.add('hide-scrollbar');
+    modalBackground = document.createElement('div');
+    modalBackground.classList.add('modal-background');
+    // backdrop.addEventListener('click', closeModal);
+    document.body.insertBefore(modalBackground, projectContainer);
+    // Modal
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    // Heading Container
+    const headingContainer = document.createElement('div');
+    headingContainer.classList.add('heading-container');
+    modal.appendChild(headingContainer);
+    // Heading
+    const heading = document.createElement('h2');
+    heading.textContent = details[i].name;
+    heading.classList.add('modal-heading');
+    headingContainer.appendChild(heading);
+    // Exit modal
+    const exitModal = document.createElement('a');
+    exitModal.classList.add('modal-exit');
+    exitModal.textContent = 'X';
+    headingContainer.appendChild(exitModal);
+    // Milestones
+    const milestonesGroup = document.createElement('ul');
+    milestonesGroup.classList.add('milestones-container');
+    modal.appendChild(milestonesGroup);
+    // Milestones group
+    const miles1 = document.createElement('li');
+    miles1.textContent = details[i].milestones[0];
+    miles1.classList.add('mileslist');
+    miles1.classList.add('miles-caps');
+    milestonesGroup.appendChild(miles1);
 
-  for (let i = 0; i < details.length; i += 1) {
-    openButton.addEventListener('click', () => {
+    const dot = document.createElement('img');
+    dot.src = 'images/work/Icons/Counter.png';
+    milestonesGroup.appendChild(dot);
 
-      
-      // body.classList.add('hide-scrollbar');
-      modalBackground = document.createElement('div');
-      modalBackground.classList.add('modal-background');
-      // backdrop.addEventListener('click', closeModal);
-      document.body.insertBefore(modalBackground, projectContainer);     
-      // Modal
-      const modal = document.createElement('div');
-      modal.classList.add('modal');
-      // Heading Container
-      const headingContainer = document.createElement('div');
-      headingContainer.classList.add('heading-container');
-      modal.appendChild(headingContainer);
-      // Heading
-      const heading = document.createElement('h2');
-      heading.textContent = details[i].name;
-      heading.classList.add('modal-heading');
-      headingContainer.appendChild(heading);
-      // Exit modal
-      const exitModal = document.createElement('a');
-      exitModal.classList.add('modal-exit');
-      exitModal.textContent = 'X';
-      headingContainer.appendChild(exitModal);
-      // Milestones
-      const milestonesGroup = document.createElement('ul');
-      milestonesGroup.classList.add('milestones-container');
-      modal.appendChild(milestonesGroup);
-      // Milestones group
-      const miles1 = document.createElement('li');
-      miles1.textContent = details[i].milestones[0];
-      miles1.classList.add('mileslist');
-      miles1.classList.add('miles-caps')
-      milestonesGroup.appendChild(miles1);
+    const miles2 = document.createElement('li');
+    miles2.textContent = details[i].milestones[1];
+    miles2.classList.add('mileslist');
+    milestonesGroup.appendChild(miles2);
 
-      const dot = document.createElement('img');
-      dot.src = 'images/work/Icons/Counter.png';
-      milestonesGroup.appendChild(dot);
+    const dot2 = document.createElement('img');
+    dot2.src = 'images/work/Icons/Counter.png';
+    milestonesGroup.appendChild(dot2);
 
-      const miles2 = document.createElement('li');
-      miles2.textContent = details[i].milestones[1];
-      miles2.classList.add('mileslist');
-      milestonesGroup.appendChild(miles2);
+    const miles3 = document.createElement('li');
+    miles3.textContent = details[i].milestones[2];
+    miles3.classList.add('mileslist');
+    milestonesGroup.appendChild(miles3);
+    // image container
+    const imageContainer = document.createElement('div');
+    imageContainer.classList.add('modal-image-container');
+    modal.appendChild(imageContainer);
+    // image
+    const image = document.createElement('img');
+    image.classList.add('modal-image');
+    image.src = details[i].image;
+    imageContainer.appendChild(image);
+    // botom row container
+    const botRow = document.createElement('div');
+    botRow.classList.add('modal-bot-row');
+    modal.appendChild(botRow);
+    // paragraph
+    const description = document.createElement('p');
+    description.textContent = details[i].description;
+    description.classList.add('modal-description');
+    botRow.appendChild(description);
+    const column2 = document.createElement('div');
+    column2.classList.add('modal-col2');
 
-      const dot2 = document.createElement('img');
-      dot2.src = 'images/work/Icons/Counter.png';
-      milestonesGroup.appendChild(dot2);
+    // Technologies
+    const techGroup = document.createElement('ul');
+    techGroup.classList.add('technologies-container');
+    botRow.appendChild(techGroup);
+    // Tech groups
+    const techList1 = document.createElement('li');
+    techList1.textContent = details[i].technologies[0];
+    techList1.classList.add('techlist');
+    techGroup.appendChild(techList1);
+    const techList2 = document.createElement('li');
+    techList2.textContent = details[i].technologies[1];
+    techList2.classList.add('techlist');
+    techGroup.appendChild(techList2);
+    const techList3 = document.createElement('li');
+    techList3.textContent = details[i].technologies[2];
+    techList3.classList.add('techlist');
+    techGroup.appendChild(techList3);
+    // Separator
+    const separator = document.createElement('hr');
+    botRow.appendChild(separator);
+    // Buttons
+    const buttonContainer = document.createElement('div');
+    buttonContainer.classList.add('button-actions');
+    botRow.appendChild(buttonContainer);
+    // Button
+    const button1 = document.createElement('button');
+    button1.setAttribute('type', 'button');
+    button1.classList.add('buttonLink');
+    // button1.textContent = 'Live link';
+    button1.innerHTML = 'Live Link <img src="images/work/Icons/link-icon.png">';
+    button1.href = details[i].link;
+    buttonContainer.appendChild(button1);
+    // Button 2
+    const button2 = document.createElement('button');
+    button2.setAttribute('type', 'button');
+    button2.classList.add('buttonSource');
+    button2.href = details[i].source;
+    button2.innerHTML = 'Source link <img src="images/work/Icons/github-icon.png">';
+    buttonContainer.appendChild(button2);
+    document.body.insertBefore(modal, projectContainer);
 
-      const miles3 = document.createElement('li');
-      miles3.textContent = details[i].milestones[2];
-      miles3.classList.add('mileslist');
-      milestonesGroup.appendChild(miles3);
-      // image container
-      const imageContainer = document.createElement('div');
-      imageContainer.classList.add('modal-image-container');
-      modal.appendChild(imageContainer);
-      // image
-      const image = document.createElement('img');
-      image.classList.add('modal-image');
-      image.src = details[i].image;
-      imageContainer.appendChild(image);
-      //botom row container
-      const botRow = document.createElement('div');
-      botRow.classList.add('modal-bot-row');
-      modal.appendChild(botRow);
-      // paragraph
-      const description = document.createElement('p');
-      description.textContent = details[i].description;
-      description.classList.add('modal-description');
-      botRow.appendChild(description);
-      const column2 = document.createElement('div');
-      column2.classList.add('modal-col2');
-  
-      // Technologies
-      const techGroup = document.createElement('ul');
-      techGroup.classList.add('technologies-container');
-      botRow.appendChild(techGroup);
-      // Tech groups
-      const techList1 = document.createElement('li');
-      techList1.textContent = details[i].technologies[0];
-      techList1.classList.add('techlist');
-      techGroup.appendChild(techList1);
-      const techList2 = document.createElement('li');
-      techList2.textContent = details[i].technologies[1];
-      techList2.classList.add('techlist');
-      techGroup.appendChild(techList2);
-      const techList3 = document.createElement('li');
-      techList3.textContent = details[i].technologies[2];
-      techList3.classList.add('techlist');
-      techGroup.appendChild(techList3);
-      // Separator
-      const separator = document.createElement('hr');
-      botRow.appendChild(separator);
-      // Buttons
-      const buttonContainer = document.createElement('div');
-      buttonContainer.classList.add('button-actions');
-      botRow.appendChild(buttonContainer);
-      // Button 1
-      const button1 = document.createElement('button');
-      button1.setAttribute('type', 'button');
-      button1.classList.add('buttonLink');
-      // button1.textContent = 'Live link';
-      button1.innerHTML = 'Live Link <img src="images/work/Icons/link-icon.png">';
-      button1.href = details[i].link;
-      buttonContainer.appendChild(button1);
-      // Button 2
-      const button2 = document.createElement('button');
-      button2.setAttribute('type', 'button');
-      button2.classList.add('buttonSource');
-      button2.href = details[i].source;
-      button2.innerHTML = 'Source link <img src="images/work/Icons/github-icon.png">';
-      buttonContainer.appendChild(button2);
-      document.body.insertBefore(modal, projectContainer);
-
-      exitModal.addEventListener('click', () => {
-        modalBackground.remove();
-        modal.remove();
-      });
+    exitModal.addEventListener('click', () => {
+      modalBackground.remove();
+      modal.remove();
     });
+  });
 }
-
-});
-
