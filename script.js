@@ -75,43 +75,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const details = [{
   name: 'Tonic',
-  description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries but also the leap into electronic typesetting remaining essent',
   image: 'images/work/screenshot/snapshot-1.png',
-  technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
+  technologies: ['html', 'css', 'javascript'],
   milestones: ['CANOPY', 'Back End Dev', '2015'],
   link: '#',
   source: '#',
 },
 
-{
-  name: 'Multi Post Stories',
-  description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-  image: 'images/work/screenshot/snapshot-2.png',
-  technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
-  milestones: ['CANOPY', 'Back End Dev', '2015'],
-  link: '#',
-  source: '#',
-},
+// {
+//   name: 'Multi Post Stories',
+//   description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries but also the leap into electronic typesetting remaining essent',
+//   image: 'images/work/screenshot/snapshot-2.png',
+//   technologies: ['html', 'css', 'javascript'],
+//   milestones: ['CANOPY', 'Back End Dev', '2015'],
+//   link: '#',
+//   source: '#',
+// },
 
-{
-  name: 'Tonic',
-  description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-  image: 'images/work/screenshot/snapshot-3.png',
-  technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
-  milestones: ['CANOPY', 'Back End Dev', '2015'],
-  link: '#',
-  source: '#',
-},
+// {
+//   name: 'Tonic',
+//   description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries but also the leap into electronic typesetting remaining essent',
+//   image: 'images/work/screenshot/snapshot-3.png',
+//   technologies: ['html', 'css', 'javascript'],
+//   milestones: ['CANOPY', 'Back End Dev', '2015'],
+//   link: '#',
+//   source: '#',
+// },
 
-{
-  name: 'Multi Post Stories ',
-  description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-  image: 'images/work/screenshot/snapshot-4.png',
-  technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
-  milestones: ['CANOPY', 'Back End Dev', '2015'],
-  link: '#',
-  source: '#',
-},
+// {
+//   name: 'Multi Post Stories ',
+//   description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries but also the leap into electronic typesetting remaining essent',
+//   image: 'images/work/screenshot/snapshot-4.png',
+//   technologies: ['html', 'css', 'javascript'],
+//   milestones: ['CANOPY', 'Back End Dev', '2015'],
+//   link: '#',
+//   source: '#',
+// },
 ];
 
 
@@ -125,22 +125,28 @@ let modalBackground;
 
   for (let i = 0; i < details.length; i += 1) {
     openButton.addEventListener('click', () => {
+      // body.classList.add('hide-scrollbar');
       modalBackground = document.createElement('div');
       modalBackground.classList.add('modal-background');
       // backdrop.addEventListener('click', closeModal);
       document.body.insertBefore(modalBackground, projectContainer);     
-
-
       // Modal
       const modal = document.createElement('div');
       modal.classList.add('modal');
-
-
+      // Heading Container
+      const headingContainer = document.createElement('div');
+      headingContainer.classList.add('heading-container');
+      modal.appendChild(headingContainer);
       // Heading
       const heading = document.createElement('h2');
       heading.textContent = details[i].name;
       heading.classList.add('modal-heading');
-      modal.appendChild(heading);
+      headingContainer.appendChild(heading);
+      // Exit modal
+      const exitModal = document.createElement('a');
+      exitModal.classList.add('modal-exit');
+      exitModal.textContent = 'X';
+      headingContainer.appendChild(exitModal);
       // Milestones
       const milestonesGroup = document.createElement('ul');
       milestonesGroup.classList.add('milestones-container');
@@ -151,10 +157,20 @@ let modalBackground;
       miles1.classList.add('mileslist');
       miles1.classList.add('miles-caps')
       milestonesGroup.appendChild(miles1);
+
+      const dot = document.createElement('img');
+      dot.src = 'images/work/Icons/Counter.png';
+      milestonesGroup.appendChild(dot);
+
       const miles2 = document.createElement('li');
       miles2.textContent = details[i].milestones[1];
       miles2.classList.add('mileslist');
       milestonesGroup.appendChild(miles2);
+
+      const dot2 = document.createElement('img');
+      dot2.src = 'images/work/Icons/Counter.png';
+      milestonesGroup.appendChild(dot2);
+
       const miles3 = document.createElement('li');
       miles3.textContent = details[i].milestones[2];
       miles3.classList.add('mileslist');
@@ -190,6 +206,9 @@ let modalBackground;
       techList3.textContent = details[i].technologies[2];
       techList3.classList.add('techlist');
       techGroup.appendChild(techList3);
+      // Separator
+      const separator = document.createElement('hr');
+      modal.appendChild(separator);
       // Buttons
       const buttonContainer = document.createElement('div');
       buttonContainer.classList.add('button-actions');
@@ -198,7 +217,8 @@ let modalBackground;
       const button1 = document.createElement('button');
       button1.setAttribute('type', 'button');
       button1.classList.add('buttonLink');
-      button1.textContent = 'Live link';
+      // button1.textContent = 'Live link';
+      button1.innerHTML = 'Live Link <img src="images/work/Icons/link-icon.png">';
       button1.href = details[i].link;
       buttonContainer.appendChild(button1);
       // Button 2
@@ -206,8 +226,15 @@ let modalBackground;
       button2.setAttribute('type', 'button');
       button2.classList.add('buttonSource');
       button2.href = details[i].source;
-      button2.textContent = 'Source link';
+      button2.innerHTML = 'Source link <img src="images/work/Icons/github-icon.png">';
       buttonContainer.appendChild(button2);
       document.body.insertBefore(modal, projectContainer);
+
+      exitModal.addEventListener('click', () => {
+        modalBackground.remove();
+        modal.remove();
+      });
+
     });
+
   }
