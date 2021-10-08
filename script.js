@@ -29,7 +29,7 @@ for (let i = 0; i < links.length; i += 1) {
   });
 }
 
-//validation form
+
 const form = document.querySelector('.contact-form');
 const errorMsg = document.getElementById('text');
 const email = document.getElementById('email');
@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     inputEmail.value = getData.email;
     inputMsg.value = getData.message;
   }
+
 });
 
 
@@ -214,3 +215,6 @@ let modalBackground;
       });
     });
 }
+
+});
+
