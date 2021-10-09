@@ -99,9 +99,11 @@ for (let i = 0; i < details.length; i += 1) {
     modal.appendChild(headingContainer);
     // Heading
     const heading = document.createElement('h2');
+    /* eslint-disable no-debugger, no-console */
     heading.textContent = details[i].name;
     heading.classList.add('modal-heading');
     headingContainer.appendChild(heading);
+    /* eslint-enable no-alert, no-console */
     // Exit modal
     const exitModal = document.createElement('a');
     exitModal.classList.add('modal-exit');
@@ -117,20 +119,16 @@ for (let i = 0; i < details.length; i += 1) {
     miles1.classList.add('mileslist');
     miles1.classList.add('miles-caps');
     milestonesGroup.appendChild(miles1);
-
     const dot = document.createElement('img');
     dot.src = 'images/work/Icons/Counter.png';
     milestonesGroup.appendChild(dot);
-
     const miles2 = document.createElement('li');
     miles2.textContent = details[i].milestones[1];
     miles2.classList.add('mileslist');
     milestonesGroup.appendChild(miles2);
-
     const dot2 = document.createElement('img');
     dot2.src = 'images/work/Icons/Counter.png';
     milestonesGroup.appendChild(dot2);
-
     const miles3 = document.createElement('li');
     miles3.textContent = details[i].milestones[2];
     miles3.classList.add('mileslist');
@@ -155,7 +153,6 @@ for (let i = 0; i < details.length; i += 1) {
     botRow.appendChild(description);
     const column2 = document.createElement('div');
     column2.classList.add('modal-col2');
-
     // Technologies
     const techGroup = document.createElement('ul');
     techGroup.classList.add('technologies-container');
