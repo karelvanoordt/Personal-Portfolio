@@ -2,7 +2,7 @@
 
 # Personal Portfolio (Desktop & Mobile Responsive version)
 
-As a part of Microvers's Module 1, I've added the necessary media queries to make the page responsive to both mobile and desktop devices.
+As a part of Microvers's Module 1, I've added html element using javascript for the pop-up modal page of my Personal Portfolio. 
 
 ![screenshot](./desktop.png)
 

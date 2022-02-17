@@ -47,7 +47,7 @@ body {
   display: none;
 }
 
-.backdrop {
+.menu-backdrop {
   position: fixed;
   background-color: #6070ff;
   opacity: 0.99;
@@ -56,6 +56,193 @@ body {
   margin-top: -120px;
   mix-blend-mode: multiply;
   backdrop-filter: blur(10px);
+}
+
+/* Pop up class */
+
+.modal-background {
+  background: #c1c7d0;
+  position: fixed;
+  mix-blend-mode: multiply;
+  backdrop-filter: blur(10px);
+  width: 100vw;
+  height: 150vh;
+  margin-top: -600px;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  padding: 16px;
+  width: 90%;
+  height: 90%;
+  background-color: #fff;
+  border: 1px solid #dfe1e6;
+  box-sizing: border-box;
+  border-radius: 16px;
+  margin: 40px 20px 40px 20px;
+  overflow-y: hidden;
+}
+
+.modal .heading-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.modal .heading-container .modal-exit {
+  text-decoration: none;
+  cursor: pointer;
+  color: #67798e;
+  font-size: 20px;
+}
+
+.modal-container a {
+  color: #67798e;
+}
+
+.modal .modal-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 44px;
+  color: #172b4d;
+  align-self: flex-start;
+}
+
+.modal .milestones-container {
+  display: flex;
+  align-self: flex-start;
+  justify-content: space-between;
+  margin-left: -29px;
+  align-items: baseline;
+}
+
+.modal .mileslist {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  margin-right: 15px;
+  color: #7a869a;
+  line-height: 16px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.modal .mileslist .miles-caps {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  margin-right: 15px;
+  color: #344563;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.modal .milestones-container img {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+
+.modal .image-container {
+  width: 90vw;
+  height: auto;
+  align-self: center;
+  justify-content: center;
+  margin-left: 40px;
+  border-radius: 8px;
+}
+
+.modal-image {
+  width: 90%;
+  height: auto;
+  align-self: center;
+}
+
+.modal .modal-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+  margin: 12px 0;
+  text-align: justify;
+}
+
+.modal .technologies-container {
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 60%;
+  margin-left: -35px;
+}
+
+.modal .technologies-container .techlist {
+  align-self: flex-start;
+  background-color: #ebebff;
+  color: #6070ff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 7px;
+}
+
+.button-actions {
+  display: flex;
+  align-items: center;
+}
+
+.button-actions .buttonLink {
+  width: 146px;
+  height: 48px;
+  margin: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #396df2;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  border: 1px solid #6070ff;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #fff;
+  justify-content: center;
+}
+
+.button-actions .buttonSource {
+  width: 146px;
+  height: 48px;
+  margin: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #396df2;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  border: 1px solid #6070ff;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #fff;
+  justify-content: space-evenly;
+}
+
+.button-actions .buttonLink img {
+  width: 10px;
+  height: auto;
+}
+
+.button-actions .buttonSource img {
+  width: 10px;
+  height: auto;
+}
+
+.modal hr {
+  border: 0.5px solid #ebecf0;
+  align-self: center;
+  width: 90%;
 }
 
 .menu-items {
@@ -435,6 +622,11 @@ ul {
   align-items: center;
 }
 
+.contact-form #text {
+  font-family: 'Poppins', sans-serif;
+  align-self: flex-start;
+}
+
 .input-text {
   height: 28px;
   color: #172b4d;
@@ -475,11 +667,6 @@ ul {
   border: none;
 }
 
-#text {
-  font-family: 'Poppins', sans-serif;
-  align-self: flex-start;
-}
-
 .submit-button {
   background-color: #fff;
   height: 60px;
@@ -517,7 +704,203 @@ ul {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 700px) {
+  .modal {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding: 16px;
+    width: 60%;
+    height: 95%;
+    background-color: #fff;
+    border: 1px solid #dfe1e6;
+    box-sizing: border-box;
+    border-radius: 16px;
+    margin: 10px 20px 10px 250px;
+    overflow-y: hidden;
+    align-self: center;
+  }
+
+  .modal .heading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .modal .heading-container .modal-exit {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    font-size: 20px;
+  }
+
+  .modal-container a {
+    color: #67798e;
+  }
+
+  .modal .modal-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #172b4d;
+    align-self: flex-start;
+  }
+
+  .modal .milestones-container {
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-between;
+    margin-left: -29px;
+    align-items: baseline;
+  }
+
+  .modal .mileslist {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    margin-right: 10px;
+    color: #7a869a;
+    line-height: 14px;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .modal .mileslist .miles-caps {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin-right: 15px;
+    color: #344563;
+    line-height: 16px;
+    font-weight: bold;
+  }
+
+  .modal .modal-image-container {
+    align-self: center;
+    justify-content: center;
+    border-radius: 8px;
+    align-items: center;
+    width: 90vh;
+    height: 40vh;
+    display: flex;
+  }
+
+  .modal .milestones-container img {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+  }
+
+  .modal-image {
+    height: 100%;
+    width: auto;
+  }
+
+  .modal .modal-bot-row {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 80%;
+    grid-gap: 1rem;
+    align-self: center;
+    margin: 10px -30px 10px 10px;
+    justify-content: center;
+  }
+
+  .modal .modal-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    line-height: 24px;
+    color: #344563;
+    margin: 12px 0;
+    text-align: justify;
+    grid-row: 1;
+  }
+
+  .modal .technologies-container {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin-top: 17px;
+    margin-left: -35px;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .modal .technologies-container .techlist {
+    align-self: flex-start;
+    background-color: #ebebff;
+    color: #6070ff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 7px;
+  }
+
+  .button-actions {
+    display: flex;
+    width: 80%;
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: -100px;
+    margin-left: -10px;
+  }
+
+  .button-actions .buttonLink {
+    width: 100px;
+    height: 22px;
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    color: #396df2;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    border: 1px solid #6070ff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #fff;
+    justify-content: center;
+  }
+
+  .button-actions .buttonLink img {
+    width: 10px;
+    height: auto;
+  }
+
+  .button-actions .buttonSource img {
+    width: 10px;
+    height: auto;
+  }
+
+  .button-actions .buttonSource {
+    width: 100px;
+    height: 22px;
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    color: #396df2;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    border: 1px solid #6070ff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #fff;
+    justify-content: center;
+  }
+
+  .modal hr {
+    border: 0.5px solid #ebecf0;
+    align-self: center;
+    width: 60%;
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 80px;
+  }
+
   .mobile-logo {
     display: none;
     text-decoration: none;
@@ -617,11 +1000,6 @@ ul {
     width: 100%;
     justify-content: right;
   }
-
-  /* .work-1-img {
-    width: 100%;
-    justify-content: center;
-  } */
 
   .about {
     display: grid;
